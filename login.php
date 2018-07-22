@@ -1,4 +1,36 @@
-<!DOCTYPE html>
+
+<?php 
+session_start();
+if ($_SESSION and $_SESSION['user']) {
+    echo "<script type='text/javascript'>location.href = 'index.php'; </script>";
+    exit;
+}
+
+include 'DB.php';
+$DB = new DB();
+$errorLogin = false;
+if(isset($_POST['Ingresar'])){
+  $user = $_POST['username'];
+  $pass = md5($_POST['password']);
+  if ($user and $pass) {
+    $DB->Listar("SELECT * FROM usuarios INNER JOIN tipo_usuario ON usuarios.ID_TIPO = tipo_usuario.ID_TIPO where USERNAME LIKE '$user' AND CONTRASENA LIKE '$pass';");
+    if (count($DB->result)>0) {
+      $_SESSION['user'] = $user;
+      $_SESSION['login_sucess'] = true;
+      foreach ($DB->result as $data) {
+        $_SESSION['id_user'] = $data->ID_USER;
+        $_SESSION['tipo_user'] = $data->TIPO_USER;
+      }
+      echo "<script type='text/javascript'>location.href = 'index.php'; </script>";
+      exit;
+    }
+    else{
+      $errorLogin = true;
+      echo '<h1 style="color: #fff;">error al ingresar</h1>';
+    }
+  }
+}
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -83,18 +115,18 @@
                 </h3>
             </div>
             <div class="panel-body">
-              <form accept-charset="UTF-8" role="form">
+              <form method="post" accept-charset="UTF-8" role="form">
                 <fieldset>
                   <div class="form-group">
                     <div class="input-group input-group-lg">
                       <span class="input-group-addon"><i class="fa fa-fw fa-envelope"></i></span>
-                      <input type="text" class="form-control" placeholder="Email">
+                      <input type="text" name="username" class="form-control" placeholder="Username">
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="input-group input-group-lg">
                       <span class="input-group-addon"><i class="fa fa-fw fa-lock"></i></span>
-                      <input type="password" class="form-control" placeholder="Password">
+                      <input type="password" name="password" class="form-control" placeholder="Password">
                     </div>
                   </div>
                   <div class="checkbox">
@@ -103,7 +135,7 @@
                         Remember Me
                       </label>
                   </div>
-                  <input class="btn btn-lg btn-primary btn-block" type="submit" value="Login">
+                  <input class="btn btn-lg btn-primary btn-block" name="Ingresar" type="submit" value="Login">
                 </fieldset>
               </form>
               <p class="m-b-0 m-t">Not signed up? <a href="register.html">Sign up here</a>.</p>

@@ -1,3 +1,7 @@
+<?php 
+session_start();
+include 'DB.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -145,8 +149,12 @@
                 <li class="user-button"><a class="btn btn-primary btn-hh-trigger" role="button" data-toggle="collapse" data-target=".header-hidden">Open</a></li>
               </ul>
               <ul class="list-inline user-menu pull-right">
-                <li class="user-register"><i class="fa fa-edit text-primary "></i> <a href="register.html" class="text-uppercase">Registro</a></li>
-                <li class="user-login"><i class="fa fa-sign-in text-primary"></i> <a href="login.html" class="text-uppercase">Iniciar Sesión</a></li>
+                <?php if ($_SESSION and $_SESSION['user']): ?>
+                  <li class="user-login"><i class="fa fa-sign-out text-primary"></i> <a href="logout.php" class="text-uppercase">Cerrar Sesión</a></li>
+                <?php else: ?>
+                  <li class="user-register"><i class="fa fa-edit text-primary "></i> <a href="register.php" class="text-uppercase">Registro</a></li>
+                  <li class="user-login"><i class="fa fa-sign-in text-primary"></i> <a href="login.php" class="text-uppercase">Iniciar Sesión</a></li>
+                <?php endif ?>
               </ul>
             </div>
           </div>
@@ -309,174 +317,29 @@
           formatos a seguir para respectiva documentación asociada. <br><br>
         </p>
         <div class="item-carousel" data-toggle="owlcarousel" data-owlcarousel-settings='{"items":4, "pagination":false, "navigation":true, "itemsScaleUp":true}'>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/showcase/project1.png" alt="Project 1 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Cascada</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Cascada</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
+          <?php 
+            $DB = new DB();
+            $DB->Listar("SELECT * FROM METODOLOGIAS");
+            foreach ($DB->result as $dato): 
+          ?>
+            <div class="item">
+              <a href="#" class="overlay-wrapper">
+                  <img src="<?php echo $dato->IMG_PREV_METO; ?>" alt="Project 1 image" class="img-responsive underlay">
+                  <span class="overlay">
+                    <span class="overlay-content"> <span class="h4"><?php echo $dato->NOMBRE_METODOLOGIA;?></span> </span>
+                  </span>
+                </a>
+              <div class="item-details bg-noise">
+                <h4 class="item-title">
+                    <a href="#"><?php echo $dato->SIGLAS_METO; ?></a>
+                  </h4>
+                <a href="metodologías.php?id=<?php echo $dato->ID_METODOLOGIA;?>" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
+                <?php if ($_SESSION and isset($_SESSION['tipo_user']) and $_SESSION['tipo_user'] == 'admin'): ?>
+                  <a href="metodologías_edit.php?id=<?php echo $dato->ID_METODOLOGIA;?>" class="btn btn-more"><i class="fa fa-pencil"></i>Editar Contenido</a>
+                <?php endif ?>
+              </div>
             </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/showcase/project2.png" alt="Project 2 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Espiral</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Espiral</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/showcase/project3.png" alt="Project 3 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Prototipo</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Prototipo</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/showcase/project4.png" alt="Project 4 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Desarrollo Rápido de Aplicaciones</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">RAD</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/showcase/project5.png" alt="Project 5 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Programación Extrema</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">XP</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/showcase/project6.png" alt="Project 6 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Scrum</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Scrum</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/showcase/project7.png" alt="Project 7 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Kanban</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Kanban</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/showcase/project8.png" alt="Project 8 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Proceso de Desarrollo Unificado</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">RUP</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/showcase/project9.png" alt="Project 9 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Agile</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Agile</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/showcase/project10.png" alt="Project 10 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Microsoft Solution Framework</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">MSF</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/showcase/project11.png" alt="Project 11 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Métrica</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Métrica</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/showcase/project12.png" alt="Project 12 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Agile Unified Process</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">AUP</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
+          <?php endforeach ?>
         </div>
       </div>
     </div>
@@ -493,146 +356,29 @@
           <br><br>
         </p>
         <div class="item-carousel" data-toggle="owlcarousel" data-owlcarousel-settings='{"items":4, "pagination":false, "navigation":true, "itemsScaleUp":true}'>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Niveles/project1.png" alt="Project 1 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Primer Nivel</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Primer Nivel</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
+          <?php 
+            $DB2 = new DB();
+            $DB2->Listar("SELECT * FROM NIVELES");
+            foreach ($DB2->result as $dato): 
+          ?>
+            <div class="item">
+              <a href="#" class="overlay-wrapper">
+                  <img src="<?php echo $dato->IMG_PREV_NIV; ?>" alt="Project 1 image" class="img-responsive underlay">
+                  <span class="overlay">
+                    <span class="overlay-content"> <span class="h4"><?php echo $dato->NOMBRE_NIV; ?></span> </span>
+                  </span>
+                </a>
+              <div class="item-details bg-noise">
+                <h4 class="item-title">
+                    <a href="nivel.php?id=<?php echo $dato->ID_NIVELES;?>"><?php echo $dato->NOMBRE_NIV; ?></a>
+                  </h4>
+                <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
+                <?php if ($_SESSION and isset($_SESSION['tipo_user']) and $_SESSION['tipo_user'] == 'admin'): ?>
+                  <a href="nivel_edit.php?id=<?php echo $dato->ID_NIVELES;?>" class="btn btn-more"><i class="fa fa-pencil"></i>Editar Contenido</a>
+                <?php endif ?>
+              </div>
             </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Niveles/project2.png" alt="Project 2 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Segundo Nivel</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Segundo Nivel</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Niveles/project3.png" alt="Project 3 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Tercer Nivel</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Tercer Nivel</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Niveles/project4.png" alt="Project 4 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Cuarto Nivel</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Cuarto Nivel</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Niveles/project5.png" alt="Project 5 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Quinto Nivel</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Quinto Nivel</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Niveles/project6.png" alt="Project 6 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Sexto Nivel</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Sexto Nivel</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Niveles/project7.png" alt="Project 7 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Séptimo Nivel</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Séptimo Nivel</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Niveles/project8.png" alt="Project 8 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Octavo Nivel</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Octavo Nivel</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Niveles/project9.png" alt="Project 9 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Noveno Nivel</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Noveno Nivel</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Niveles/project10.png" alt="Project 10 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Décimo Nivel</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Décimo Nivel</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
+          <?php endforeach ?>
         </div>
       </div>
     </div>
@@ -642,6 +388,10 @@
         <h2 class="block-title">
             Materias y Asignaturas de Ingeniería
           </h2>
+        <?php if ($_SESSION and isset($_SESSION['tipo_user']) and $_SESSION['tipo_user'] == 'admin'): ?>
+          <a href="agregar_materia.php" class="btn btn-more"><i class="fa fa-plus"></i>Agregar Materias</a>
+        <?php endif ?>
+        <br><br>
         <p>
           Asignaturas necesarias de aprobación para suma de créditos de la carrera.
           <br>
@@ -649,328 +399,29 @@
           <br><br>
         </p>
         <div class="item-carousel" data-toggle="owlcarousel" data-owlcarousel-settings='{"items":4, "pagination":false, "navigation":true, "itemsScaleUp":true}'>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Materias/fundamento.jpg" alt="Project 1 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Fundamentos de Programación</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Programación</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
+          <?php 
+            $DB3 = new DB();
+            $DB3->Listar("SELECT * FROM temas");
+            foreach ($DB3->result as $dato): 
+          ?>
+            <div class="item">
+              <a href="#" class="overlay-wrapper">
+                  <img src="<?php echo $dato->IMG_PREV_TEMA; ?>" alt="Project 1 image" class="img-responsive underlay">
+                  <span class="overlay">
+                    <span class="overlay-content"> <span class="h4"><?php echo $dato->NOMBRE_TEMA; ?></span> </span>
+                  </span>
+                </a>
+              <div class="item-details bg-noise">
+                <h4 class="item-title">
+                    <a href="#"><?php echo $dato->SIGLAS; ?></a>
+                  </h4>
+                <a href="<?php echo $dato->PDF_TEMA;?>" target="_blank" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
+                <?php if ($_SESSION and isset($_SESSION['tipo_user']) and $_SESSION['tipo_user'] == 'admin'): ?>
+                  <a href="asig_edit.php?id=<?php echo $dato->ID_TEMA;?>" class="btn btn-more"><i class="fa fa-pencil"></i>Editar Contenido</a>
+                <?php endif ?>
+              </div>
             </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Materias/diferencial.PNG" alt="Project 2 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Cálculo Diferencial</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Cálculo Diferencial</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Materias/algebra.jpg" alt="Project 3 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Álgebra Lineal</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Álgebra Lineal</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Materias/poo.jpg" alt="Project 4 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Programación Orientada a Objetos</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">POO</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Materias/es.jpg" alt="Project 5 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Estructura de Datos</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">ED</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Materias/web1.jpg" alt="Project 6 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Programación Aplicada a la Web</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Web</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Materias/electronica.jpg" alt="Project 7 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Electrónica</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Electrónica</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Materias/analisis.jpg" alt="Project 8 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Análisis y Diseño de Base de Datos</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">ADBD</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Materias/movil.jpg" alt="Project 9 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Programación Móvil</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Móvil</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Materias/so1.PNG" alt="Project 10 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Ingeniería de Software I</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">IS 1</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Materias/p1.jpg" alt="Project 11 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Proyecto Integrador I</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">PI 1</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Materias/ab.jpg" alt="Project 12 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Administración de Base de Datos</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">ABD</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Materias/so2.jpg" alt="Project 12 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Ingeniería de Software II</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">IS 2</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Materias/metodos.jpg" alt="Project 12 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Métodos Numéricos</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Métodos Numéricos</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Materias/bd.jpg" alt="Project 12 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Base de Datos Distribuidas</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">BDD</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Materias/s1.jpg" alt="Project 12 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Sistemas Expertos</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Sistemas Expertos</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Materias/gs.jpg" alt="Project 12 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Gestión de la Calidad del Software</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">GCS</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Materias/sd.jpg" alt="Project 12 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Sistemas Distribuidos</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Sistemas Distribuidos</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Materias/p2.jpg" alt="Project 12 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Proyecto Integrador II</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">PI 2</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Materias/simulacion.jpg" alt="Project 12 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Técnicas de Simulación</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Técnicas de Simulación</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Materias/sc.PNG" alt="Project 12 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Sistemas Corporativos de Gestión</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">SCG</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Materias/gp.jpg" alt="Project 12 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Gestión de Proyectos</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Gestión de Proyectos</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
-          <div class="item">
-            <a href="#" class="overlay-wrapper">
-                <img src="img/Materias/servidor.jpg" alt="Project 12 image" class="img-responsive underlay">
-                <span class="overlay">
-                  <span class="overlay-content"> <span class="h4">Administración de Servidores</span> </span>
-                </span>
-              </a>
-            <div class="item-details bg-noise">
-              <h4 class="item-title">
-                  <a href="#">Servidores</a>
-                </h4>
-              <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
-            </div>
-          </div>
+          <?php endforeach ?>
         </div>
       </div>
     </div>
