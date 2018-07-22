@@ -6,24 +6,24 @@ $EmailFrom = "anlecap17@gmail.com";
 $EmailTo = "anlecap17@gmail.com";
 $Subject = "Formulario de contacto";
 
-$Name = Trim(stripslashes($_POST['Name'])); 
-$Tel = Trim(stripslashes($_POST['Tel'])); 
-$Email = Trim(stripslashes($_POST['Email'])); 
-$Message = Trim(stripslashes($_POST['Message'])); 
+$Name = Trim(stripslashes($_POST['name'])); 
+$Email = Trim(stripslashes($_POST['email'])); 
+$Subject = Trim(stripslashes($_POST['subject'])); 
+$Message = Trim(stripslashes($_POST['message'])); 
 
 // prepare email body text
 $Body = "";
 $Body .= "Name: ";
-$Body .= $name;
-$Body .= "\n";
-$Body .= "Tel: ";
-$Body .= $Tel;
+$Body .= $Name;
 $Body .= "\n";
 $Body .= "Email: ";
-$Body .= $email;
+$Body .= $Email;
+$Body .= "\n";
+$Body .= "Subject: ";
+$Body .= $Subject;
 $Body .= "\n";
 $Body .= "Message: ";
-$Body .= $message;
+$Body .= $Message;
 $Body .= "\n";
 
 // send email 
@@ -31,10 +31,5 @@ $success = mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
 
 // redirect to success page
 // CHANGE THE URL BELOW TO YOUR "THANK YOU" PAGE
-if ($success){
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=contactthanks.html\">";
-}
-else{
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=error.html\">";
-}
+
 ?>
