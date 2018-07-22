@@ -3,10 +3,11 @@
  * Custom scripts demo background & colour switcher
  *
  *******************************************************/
+ 
+  var defaultColour = 'orange';
 $(document).ready(function() {
   // Background & colour switcher
   // =============================
-  var defaultColour = 'orange';
   
   //make current background active in switcher
   if ($('.switcher a.background').size() > 0) {
@@ -40,5 +41,23 @@ $(document).ready(function() {
     
     $('.switcher a.'+ c).addClass('active');
   });
-  $( "#color-verde" ).trigger( "click" );
+  //$( ".green" ).trigger( "click" );
+  changeColor('green')
 });
+
+
+function changeColor(c){
+  console.log(c)
+  if (c != defaultColour) {
+    $('#colour-scheme').attr('href','css/colour-'+ c +'.css');
+  }
+  else {
+    $('#colour-scheme').attr('href', '#');
+  }
+  $('.switcher a.colour').removeClass('active');
+  $('#background-wrapper').removeClass();
+  $('#background-wrapper').addClass(c);
+  $('.switcher a.background').removeClass('active');
+
+  $('.switcher a.'+ c).addClass('active');
+}
