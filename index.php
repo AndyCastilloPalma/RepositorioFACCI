@@ -52,9 +52,9 @@ include 'DB.php';
 
   <!-- =======================================================
     Theme Name: Flexor
-    Theme URL: https://bootstrapmade.com/flexor-free-multipurpose-bootstrap-template/
+    Theme URL: #/flexor-free-multipurpose-bootstrap-template/
     Author: BootstrapMade.com
-    Author URL: https://bootstrapmade.com
+    Author URL: #
   ======================================================= -->
 </head>
 
@@ -221,7 +221,7 @@ include 'DB.php';
                     <div class="row">
                       <div class="col-md-7">La información ha sido de ayuda? <strong>envíe sugerencias en nuestro formulario.</strong></div>
                       <div class="col-md-5">
-                        <a href="https://bootstrapmade.com" class="btn btn-more btn-lg pull-right"><i class="fa fa-cloud-download"></i>Descargas</a>
+                        <a href="#" class="btn btn-more btn-lg pull-right"><i class="fa fa-cloud-download"></i>Descargas</a>
                       </div>
                     </div>
                   </li>
@@ -254,7 +254,7 @@ include 'DB.php';
                       el proceso de formación académica de profesionales de Ingeniería en Sistemas brindando <br>
                       un sitio que aloja talleres, guías y modelos prácticos de desarrollo de actividades.
                   </p>
-                  <a href="https://bootstrapmade.com" class="btn btn-more btn-lg i-right">Leer más <i class="fa fa-plus"></i></a>
+                  <a href="#" class="btn btn-more btn-lg i-right">Leer más <i class="fa fa-plus"></i></a>
                 </div>
                 <div class="col-md-6 col-md-pull-6 hidden-xs">
                   <img src="img/slides/slide1.png" alt="Slide 1" class="center-block img-responsive">
@@ -279,7 +279,7 @@ include 'DB.php';
                     con criterio creativo e innovador de reconocimiento local y nacional; en la <br>
                     formación integral de profesionales generadores de bienes y servicios.
                   </p>
-                  <a href="https://bootstrapmade.com" class="btn btn-more btn-lg"><i class="fa fa-plus"></i>Leer más</a>
+                  <a href="#" class="btn btn-more btn-lg"><i class="fa fa-plus"></i>Leer más</a>
                 </div>
                 <div class="col-md-6 hidden-xs">
                   <img src="img/slides/slide2.png" alt="Slide 2" class="center-block img-responsive">
@@ -474,7 +474,7 @@ include 'DB.php';
               como en su contenido digital.
             </p>
             <p>
-              <a href="#" class="btn btn-more i-right">Learn More <i class="fa fa-angle-right"></i></a>
+              <a href="#" class="btn btn-more i-right">Leer más <i class="fa fa-angle-right"></i></a>
             </p>
           </div>
         </div>
@@ -577,7 +577,7 @@ Usage: data-block-bg-img="IMAGE-URL" to apply a background image clearly via jQu
           <span data-counter-up>25000</span>s
         </h2>
       <h3 class="h-lg m-t-0 m-b-lg">
-          De usuarios felices!
+          Usuarios satisfechos!
         </h3>
       <p>
         <a href="#contacto" class="btn btn-more btn-lg i-right">Contáctanos ahora! <i class="fa fa-angle-right"></i></a>
@@ -667,27 +667,27 @@ Usage: data-block-bg-img="IMAGE-URL" to apply a background image clearly via jQu
           <div class="row">
             <!--Client logos should be within a 120px wide by 60px height image canvas-->
             <div class="col-xs-6 col-md-2">
-              <a href="https://bootstrapmade.com" title="Client 1">
-                  <img src="img/clients/softwarelibre.png" alt="Client 1 logo" class="img-responsive">
+              <a href="#" title="Software Libre">
+                  <img src="img/clients/softwarelibre.png" alt="Ssoftware Libre" class="img-responsive">
                 </a>
             </div>
             <div class="col-xs-6 col-md-2">
-              <a href="https://bootstrapmade.com" title="Client 2">
+              <a href="#" title="Client 2">
                   <img src="img/clients/microsoft.png" alt="Client 2 logo" class="img-responsive">
                 </a>
             </div>
             <div class="col-xs-6 col-md-2">
-              <a href="https://bootstrapmade.com" title="Client 3">
+              <a href="#" title="Client 3">
                   <img src="img/clients/mobilemonkeys.png" alt="Client 3 logo" class="img-responsive">
                 </a>
             </div>
             <div class="col-xs-6 col-md-2">
-              <a href="https://bootstrapmade.com" title="Client 4">
+              <a href="#" title="Client 4">
                   <img src="img/clients/vesgeek.png" alt="Client 4 logo" class="img-responsive">
                 </a>
             </div>
             <div class="col-xs-6 col-md-2">
-              <a href="https://bootstrapmade.com" title="Client 5">
+              <a href="#" title="Client 5">
                   <img src="img/clients/ieee.png" alt="Client 5 logo" class="img-responsive">
                 </a>
             </div>
@@ -771,8 +771,8 @@ Usage: data-block-bg-img="IMAGE-URL" to apply a background image clearly via jQu
             <!--
               All the links in the footer should remain intact.
               You can delete the links only if you purchased the pro version.
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Flexor
+              Licensing information: #/license/
+              Purchase the pro version with working PHP/AJAX contact form: #/buy/?theme=Flexor
             -->
             <a href="https://www.facebook.com/anlecap/" target = "_blank">Desarrollado por:</a> anlecap soluciones informáticas
           </div>
