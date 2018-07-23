@@ -74,7 +74,7 @@ include 'DB.php';
                 </h3>
               <p>Sitio web que aloja material académico y promueve el buen uso de la información en mejora de 
                 los niveles de estudio de la Facultad de Ciencias Informáticas.</p>
-              <a href="about.html" class="btn btn-more"><i class="fa fa-plus"></i> Learn more</a>
+              <a href="about.php" class="btn btn-more"><i class="fa fa-plus"></i> Leer más</a>
             </div>
             <div class="col-md-3">
               <!--@todo: replace with company contact details-->
@@ -131,7 +131,7 @@ include 'DB.php';
           <div class="row">
             <div class="col-md-8">
               <!--navbar-branding/logo - hidden image tag & site name so things like Facebook to pick up, actual logo set via CSS for flexibility -->
-              <a class="navbar-brand" href="index.html" title="Home">
+              <a class="navbar-brand" href="index.php" title="Home">
                 <h1 class="hidden">
                     <img src="img/logo.png" alt="Flexor Logo">
                     FACCI
@@ -176,23 +176,23 @@ include 'DB.php';
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav" id="main-menu">
               <li class="icon-link">
-                <a href="index.html"><i class="fa fa-home"></i></a>
+                <a href="index.php"><i class="fa fa-home"></i></a>
               </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Niveles<b class="caret"></b></a>
                 <!-- Dropdown Menu -->
                 <ul class="dropdown-menu">
                   <li class="dropdown-header">Niveles de estudio</li>
-                  <li><a href="elements.html" tabindex="-1" class="menu-item">Primero</a></li>
-                  <li><a href="about.html" tabindex="-1" class="menu-item">Segundo</a></li>
-                  <li><a href="login.html" tabindex="-1" class="menu-item">Tercero</a></li>
-                  <li><a href="register.html" tabindex="-1" class="menu-item">Cuarto</a></li>
-                  <li><a href="elements.html" tabindex="-1" class="menu-item">Quinto</a></li>
-                  <li><a href="about.html" tabindex="-1" class="menu-item">Sexto</a></li>
-                  <li><a href="login.html" tabindex="-1" class="menu-item">Séptimo</a></li>
-                  <li><a href="register.html" tabindex="-1" class="menu-item">Octavo</a></li>
-                  <li><a href="login.html" tabindex="-1" class="menu-item">Noveno</a></li>
-                  <li><a href="register.html" tabindex="-1" class="menu-item">Décimo</a></li>
+                  <li><a href="elements.php" tabindex="-1" class="menu-item">Primero</a></li>
+                  <li><a href="about.php" tabindex="-1" class="menu-item">Segundo</a></li>
+                  <li><a href="login.php" tabindex="-1" class="menu-item">Tercero</a></li>
+                  <li><a href="register.php" tabindex="-1" class="menu-item">Cuarto</a></li>
+                  <li><a href="elements.php" tabindex="-1" class="menu-item">Quinto</a></li>
+                  <li><a href="about.php" tabindex="-1" class="menu-item">Sexto</a></li>
+                  <li><a href="login.php" tabindex="-1" class="menu-item">Séptimo</a></li>
+                  <li><a href="register.php" tabindex="-1" class="menu-item">Octavo</a></li>
+                  <li><a href="login.php" tabindex="-1" class="menu-item">Noveno</a></li>
+                  <li><a href="register.php" tabindex="-1" class="menu-item">Décimo</a></li>
                   <li class="dropdown-footer">REPOSITORIO FACCI</li>
                 </ul>
               </li>
@@ -300,7 +300,7 @@ include 'DB.php';
         <h2 class="text-shadow-white">
             Nuestro objetivo es brindar a la FACCI una herramienta guía en su proceso de formación
             profesional, teniendo a disposición contenido de calidad
-            <a href="about.html" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
+            <a href="about.php" class="btn btn-more"><i class="fa fa-plus"></i>Leer más</a>
           </h2>
       </div>
     </div>
@@ -429,7 +429,7 @@ include 'DB.php';
     <div class="services block block-bg-gradient block-border-bottom">
       <div class="container">
         <h2 class="block-title">
-            Our Services
+            Servicios
           </h2>
         <div class="row">
           <div class="col-md-4 text-center">
@@ -437,23 +437,29 @@ include 'DB.php';
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
               <i class="fa fa-group fa-stack-1x fa-inverse"></i> </span>
             <h4 class="text-weight-strong">
-                User Experience / Information Architecture
+                Integración de los estudiantes a la carrera
               </h4>
-            <p>Rhoncus adipiscing, magna integer cursus augue eros lacus porttitor magna. Dictumst, odio! Elementum tortor sociis in eu dis dictumst pulvinar lorem nec aliquam a nascetur.</p>
             <p>
-              <a href="#" class="btn btn-more i-right">Learn More <i class="fa fa-angle-right"></i></a>
+              Una ayuda muy útil para que las comunidad estudiantil en proceso de formación desarrolles sus capacidades
+              con material académico de calidad.
+            </p>
+            <p>
+              <a href="about.php" class="btn btn-more i-right">Leer más <i class="fa fa-angle-right"></i></a>
             </p>
           </div>
           <div class="col-md-4 text-center">
             <span class="fa-stack fa-5x">
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
               <i class="fa fa-pencil fa-stack-1x fa-inverse"></i> </span>
-            <h4 class="text-weight-strong">
-                User Interface Design / User Interface Theming
+              <h4 class="text-weight-strong">
+                Interfaz de usuario intuitiva
               </h4>
-            <p>Rhoncus adipiscing, magna integer cursus augue eros lacus porttitor magna. Dictumst, odio! Elementum tortor sociis in eu dis dictumst pulvinar lorem nec aliquam a nascetur.</p>
             <p>
-              <a href="#" class="btn btn-more i-right">Learn More <i class="fa fa-angle-right"></i></a>
+              Con enlaces externos a contenido visual tipo vídeo y lector de archivo para lograr visualizar los elementos
+              cargados al repositorio.
+            </p>
+            <p>
+              <a href="about.php" class="btn btn-more i-right">Leer más <i class="fa fa-angle-right"></i></a>
             </p>
           </div>
           <div class="col-md-4 text-center">
@@ -461,9 +467,12 @@ include 'DB.php';
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
               <i class="fa fa-cogs fa-stack-1x fa-inverse"></i> </span>
             <h4 class="text-weight-strong">
-                Code &amp; Development / Implementation Support
+                Mejora continua de contenido
               </h4>
-            <p>Rhoncus adipiscing, magna integer cursus augue eros lacus porttitor magna. Dictumst, odio! Elementum tortor sociis in eu dis dictumst pulvinar lorem nec aliquam a nascetur.</p>
+            <p>
+              En constante desarrollo de material para mantener el repositorio actualizado tanto en su funcionalidad como sistema 
+              como en su contenido digital.
+            </p>
             <p>
               <a href="#" class="btn btn-more i-right">Learn More <i class="fa fa-angle-right"></i></a>
             </p>
@@ -471,7 +480,7 @@ include 'DB.php';
         </div>
       </div>
     </div>
-    <!-- Pricing -->
+    <!-- Pricing 
     <div class="block-contained">
       <h2 class="block-title">
           Our Plans
@@ -560,19 +569,18 @@ include 'DB.php';
         </div>
       </div>
     </div>
-    <!--
 Background image callout with CSS overlay
 Usage: data-block-bg-img="IMAGE-URL" to apply a background image clearly via jQuery .block-bg-overlay = overlays the background image, colour is inherited from block-bg-* classes .block-bg-overlay-NUMBER = determines opcacity value of overlay from 1-9 (default is 5) ie. .block-bg-overlay-2 or .block-bg-overlay-6
 -->
     <div class="block block-pd-sm block-bg-grey-dark block-bg-overlay block-bg-overlay-6 text-center" data-block-bg-img="https://picjumbo.imgix.net/HNCK1088.jpg?q=40&amp;w=1650&amp;sharp=30" data-stellar-background-ratio="0.3">
       <h2 class="h-xlg h1 m-a-0">
-          <span data-counter-up>100,000,0</span>s
+          <span data-counter-up>25000</span>s
         </h2>
       <h3 class="h-lg m-t-0 m-b-lg">
-          Of Happy Customers!
+          De usuarios felices!
         </h3>
       <p>
-        <a href="#" class="btn btn-more btn-lg i-right">Join them today! <i class="fa fa-angle-right"></i></a>
+        <a href="#contacto" class="btn btn-more btn-lg i-right">Contáctanos ahora! <i class="fa fa-angle-right"></i></a>
       </p>
     </div>
     <!--Customer testimonial & Latest Blog posts-->
@@ -581,41 +589,44 @@ Usage: data-block-bg-img="IMAGE-URL" to apply a background image clearly via jQu
         <!--Customer testimonial-->
         <div class="col-md-6 m-b-lg">
           <h3 class="block-title">
-              Testimonials
+              Motivación
             </h3>
           <blockquote>
-            <p>Our productivity &amp; sales are up! Customers are happy &amp; we couldn't be happier with this product!</p>
+            <p>
+              La vida es una obra de teatro que no permite ensayos... Por eso, canta, ríe, baila, llora y vive intensamente
+              cada momento de tu vida... antes que el telón baje y la obra termine sin aplausos.
+            </p>
             <img src="img/misc/charles-quote.png" alt="Charles Spencer Chaplin">
             <small>
                 <strong>Charles Chaplin</strong>
                 <br>
-                British comic actor
+                Actor humorista inglés
               </small>
           </blockquote>
         </div>
         <!--Latest Blog posts-->
         <div class="col-md-6 blog-roll">
           <h3 class="block-title">
-              Latest From Our Blog
+              Comentarios
             </h3>
           <!-- Blog post 1-->
           <div class="media">
             <div class="media-left hidden-xs">
               <!-- Date desktop -->
-              <div class="date-wrapper"> <span class="date-m">Feb</span> <span class="date-d">01</span> </div>
+              <div class="date-wrapper"> <span class="date-m">Mar</span> <span class="date-d">24</span> </div>
             </div>
             <div class="media-body">
               <h4 class="media-heading">
-                  <a href="#" class="text-weight-strong">amet urna integer urna enim, sit arcu pid in nec?</a>
+                  <a href="#" class="text-weight-strong">¡Una excelente herramienta!</a>
                 </h4>
               <!-- Meta details mobile -->
               <ul class="list-inline meta text-muted visible-xs">
-                <li><i class="fa fa-calendar"></i> <span class="visible-md">Created:</span> Fri 1st Feb 2013</li>
-                <li><i class="fa fa-user"></i> <a href="#">Joe</a></li>
+                <li><i class="fa fa-calendar"></i> <span class="visible-md">Creado:</span> 24 de Marzo del 2018</li>
+                <li><i class="fa fa-user"></i> <a href="#">Kenya</a></li>
               </ul>
               <p>
-                Ut <strong>commodo ullamcorper risus nec</strong> mattis. Morbi tincidunt posuere turpis eu laoreet. Nulla facilisi. Aenean at massa leo. Vestibulum in varius arcu.
-                <a href="#">Read more <i class="fa fa-angle-right"></i></a>
+                Sirve <strong>en gran manera</strong> 
+                a que los estudiantes no divaguen en internet con temas o conenido inadecuado.
               </p>
             </div>
           </div>
@@ -623,20 +634,20 @@ Usage: data-block-bg-img="IMAGE-URL" to apply a background image clearly via jQu
           <div class="media">
             <div class="media-left hidden-xs">
               <!-- Date desktop -->
-              <div class="date-wrapper"> <span class="date-m">Jan</span> <span class="date-d">17</span> </div>
+              <div class="date-wrapper"> <span class="date-m">Sep</span> <span class="date-d">17</span> </div>
             </div>
             <div class="media-body">
               <h4 class="media-heading">
-                  <a href="#" class="text-weight-strong">a nec in sed hac ultrices cursus</a>
+                  <a href="#" class="text-weight-strong">Temáticas profesionales</a>
                 </h4>
               <!-- Meta details mobile -->
               <ul class="list-inline meta text-muted visible-xs">
-                <li><i class="fa fa-calendar"></i> <span class="visible-md">Created:</span> Thu 17th Jan 2013</li>
-                <li><i class="fa fa-user"></i> <a href="#">Joe</a></li>
+                <li><i class="fa fa-calendar"></i> <span class="visible-md">Creado:</span> 17 de Septiembre del 2018</li>
+                <li><i class="fa fa-user"></i> <a href="#">Andy</a></li>
               </ul>
               <p>
-                Nam risus magna, fringilla sit amet blandit viverra, dignissim eget est. Aenean at massa leo. Vestibulum in varius arcu.
-                <a href="#">Read more <i class="fa fa-angle-right"></i></a>
+                Contenidos y temas de acuerdo a los ítems presentes en los sílabos de asignatura correspondientes
+                a la malla curricular.
               </p>
             </div>
           </div>
@@ -657,32 +668,27 @@ Usage: data-block-bg-img="IMAGE-URL" to apply a background image clearly via jQu
             <!--Client logos should be within a 120px wide by 60px height image canvas-->
             <div class="col-xs-6 col-md-2">
               <a href="https://bootstrapmade.com" title="Client 1">
-                  <img src="img/clients/client1.png" alt="Client 1 logo" class="img-responsive">
+                  <img src="img/clients/softwarelibre.png" alt="Client 1 logo" class="img-responsive">
                 </a>
             </div>
             <div class="col-xs-6 col-md-2">
               <a href="https://bootstrapmade.com" title="Client 2">
-                  <img src="img/clients/client2.png" alt="Client 2 logo" class="img-responsive">
+                  <img src="img/clients/microsoft.png" alt="Client 2 logo" class="img-responsive">
                 </a>
             </div>
             <div class="col-xs-6 col-md-2">
               <a href="https://bootstrapmade.com" title="Client 3">
-                  <img src="img/clients/client3.png" alt="Client 3 logo" class="img-responsive">
+                  <img src="img/clients/mobilemonkeys.png" alt="Client 3 logo" class="img-responsive">
                 </a>
             </div>
             <div class="col-xs-6 col-md-2">
               <a href="https://bootstrapmade.com" title="Client 4">
-                  <img src="img/clients/client4.png" alt="Client 4 logo" class="img-responsive">
+                  <img src="img/clients/vesgeek.png" alt="Client 4 logo" class="img-responsive">
                 </a>
             </div>
             <div class="col-xs-6 col-md-2">
               <a href="https://bootstrapmade.com" title="Client 5">
-                  <img src="img/clients/client5.png" alt="Client 5 logo" class="img-responsive">
-                </a>
-            </div>
-            <div class="col-xs-6 col-md-2">
-              <a href="https://bootstrapmade.com" title="Client 6">
-                  <img src="img/clients/client6.png" alt="Client 6 logo" class="img-responsive">
+                  <img src="img/clients/ieee.png" alt="Client 5 logo" class="img-responsive">
                 </a>
             </div>
           </div>
@@ -699,55 +705,57 @@ Usage: data-block-bg-img="IMAGE-URL" to apply a background image clearly via jQu
 
         <div class="col-md-3">
           <address>
-              <strong>Flexor Bootstrap Theme Inc</strong>
+              <strong>Información de contacto</strong>
               <br>
-              <i class="fa fa-map-pin fa-fw text-primary"></i> Sunshine House, Sunville. SUN12
+              <i class="fa fa-map-pin fa-fw text-primary"></i> Manta, ciudadela universitaria
               <br>
-              <i class="fa fa-phone fa-fw text-primary"></i> 019223 8092344
+              <i class="fa fa-phone fa-fw text-primary"></i>  (05) 262-3046 
               <br>
-              <i class="fa fa-envelope-o fa-fw text-primary"></i> info@flexorinc.com
+              <i class="fa fa-envelope-o fa-fw text-primary"></i> info@facci.com
               <br>
             </address>
         </div>
 
-        <div class="col-md-6">
+        <div id = "contacto" class="col-md-6">
           <h4 class="text-uppercase">
-              Contact Us
+              Contacto
             </h4>
           <div class="form">
-            <div id="sendmessage">Your message has been sent. Thank you!</div>
+            <div id="sendmessage">
+              Tu mensaje ha sido enviado. ¡Gracias!
+            </div>
             <div id="errormessage"></div>
             <form action="contactform.php" method="post" role="form" class="contactForm">
               <div class="form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email, dirección de correo" data-rule="email" data-msg="Please enter a valid email" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensaje"></textarea>
                 <div class="validation"></div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit">Enviar mensaje</button></div>
             </form>
           </div>
         </div>
 
         <div class="col-md-3">
           <h4 class="text-uppercase">
-              Follow Us On:
+              Síguemos:
             </h4>
           <!--social media icons-->
           <div class="social-media social-media-stacked">
             <!--@todo: replace with company social media details-->
             <a href="#"><i class="fa fa-twitter fa-fw"></i> Twitter</a>
-            <a href="#"><i class="fa fa-facebook fa-fw"></i> Facebook</a>
+            <a href="https://www.facebook.com/Facci.Uleam/" target = "_blank"><i class="fa fa-facebook fa-fw"></i> Facebook</a>
             <a href="#"><i class="fa fa-linkedin fa-fw"></i> LinkedIn</a>
             <a href="#"><i class="fa fa-google-plus fa-fw"></i> Google+</a>
           </div>
@@ -758,7 +766,7 @@ Usage: data-block-bg-img="IMAGE-URL" to apply a background image clearly via jQu
       <div class="row subfooter">
         <!--@todo: replace with company copyright details-->
         <div class="col-md-7">
-          <p>Copyright © Flexor Theme</p>
+          <p>Copyright © anlecap</p>
           <div class="credits">
             <!--
               All the links in the footer should remain intact.
@@ -766,14 +774,14 @@ Usage: data-block-bg-img="IMAGE-URL" to apply a background image clearly via jQu
               Licensing information: https://bootstrapmade.com/license/
               Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Flexor
             -->
-            <a href="https://bootstrapmade.com/">Free Bootstrap Templates</a> by BootstrapMade.com
+            <a href="https://www.facebook.com/anlecap/" target = "_blank">Desarrollado por:</a> anlecap soluciones informáticas
           </div>
         </div>
         <div class="col-md-5">
           <ul class="list-inline pull-right">
-            <li><a href="#">Terms</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Términos</a></li>
+            <li><a href="#">Privacidad</a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=593996190948" target = "_blank">Contacto</a></li>
           </ul>
         </div>
       </div>
