@@ -196,7 +196,8 @@ include 'DB.php';
                   <li class="dropdown-footer">REPOSITORIO FACCI</li>
                 </ul>
               </li>
-              <li><a href="#">Documentación</a></li>
+              <li><a href="pdf\CASTILLO_ANDY_BOHÓRQUEZ_CARLOS_CANTOS_ERICK_BENÍTEZ_JUNIOR_8A_PRESENTACIÓN_PROYECTO_G2_V.3_2018.pdf"
+              target = "_blank">Documentación</a></li>
               <li class="dropdown dropdown-mm">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Talleres<b class="caret"></b></a>
                 <!-- Dropdown Menu -->
