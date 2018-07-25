@@ -243,51 +243,94 @@ include 'DB.php';
         <div class="col-md-9 col-md-push-3">
           <div class="page-header">
             <h1>
-                About Us
-                <small>How it all began</small>
+                Resumen ejecutivo
+                <small>Proyecto</small>
               </h1>
           </div>
           <div class="block block-border-bottom-grey block-pd-sm">
             <h3 class="block-title">
-                What Makes Us Tick!
+                Repositorio web con recursos académicos
               </h3>
-            <img src="img/misc/about-us.png" alt="About us" class="img-responsive img-thumbnail pull-right m-l m-b">
-            <p>Elit pellentesque dolor facilisis aenean eu tempor, phasellus lundium risus dolor, augue, ridiculus nascetur odio ridiculus? Hac ac, adipiscing ut dapibus. Adipiscing cras in? Magna nisi augue odio! Pellentesque magnis? Lacus integer magnis
-              purus sed mus lorem aliquam lectus, placerat pellentesque quis, nunc urna turpis lorem. Etiam velit, augue sed magnis placerat! In cras, dignissim lorem, porttitor in velit in, nisi vut a cursus cum, odio sagittis nisi turpis? Mus penatibus
-              non, pulvinar porttitor arcu hac ut et ac integer? Ultricies est etiam sit. Urna ridiculus facilisis pulvinar, ultrices augue? Parturient velit non tincidunt sit sagittis pulvinar phasellus rhoncus hac! Sit porta. Tristique, hac. Porttitor
-              adipiscing ac. Ac tincidunt a porttitor natoque auctor ultricies! Proin nunc scelerisque? Habitasse adipiscing? Cursus.</p>
-            <p>Elit pellentesque dolor facilisis aenean eu tempor, phasellus lundium risus dolor, augue, ridiculus nascetur odio ridiculus? Hac ac, adipiscing ut dapibus. Adipiscing cras in? Magna nisi augue odio! Pellentesque magnis? Lacus integer magnis
-              purus sed mus lorem aliquam lectus, placerat pellentesque quis, nunc urna turpis lorem. Etiam velit, augue sed magnis placerat! In cras, dignissim lorem, porttitor in velit in, nisi vut a cursus cum, odio sagittis nisi turpis? Mus penatibus
-              non, pulvinar porttitor arcu hac ut et ac integer? Ultricies est etiam sit. Urna ridiculus facilisis pulvinar, ultrices augue? Parturient velit non tincidunt sit sagittis pulvinar phasellus rhoncus hac! Sit porta. Tristique, hac. Porttitor
-              adipiscing ac. Ac tincidunt a porttitor natoque auctor ultricies! Proin nunc scelerisque? Habitasse adipiscing? Cursus.</p>
+            <img src="img/misc/objetivos.png" alt="About us" class="img-responsive img-thumbnail pull-right m-l m-b">
+            <p align = "justify">
+            La finalidad de este trabajo es analizar la metodología y modelo de procesos
+adecuados y necesarios para llevar a cabo este proyecto y así brindar un servicio
+urgente en el proceso de formación profesional en el área de Ciencias Informáticas,
+desarrollando un acceso estudiantil hacia un repositorio de información digital
+conteniendo guías y talleres prácticos del modelo educativo.
+Aplicando elementos de recolección de datos (encuestas y entrevistas) a
+estudiantes y docentes de la Facultad de Ciencias Informáticas (FACCI), se logro
+detectar que existe una falta de información verídica en la web, obteniendo así gran
+confusión por parte de estudiantes, esta recolección permitió obtener las
+características necesarias para la realización del repositorio académico.
+Actualmente la información es la riqueza del mundo y por aquello debe ser
+compartida para todas las personas motivadas por aprendizaje con contenido de
+calidad y al nivel correspondiente por la cual se busca utilizarla. Este proceso se
+evalúa y sigue un marco metodológico iterativo basado en el desarrollo de
+sistemas eXtreme Programming como guía de producción orientada a la
+programación de sitios eficientes y accesibles en un tiempo promedio de
+finalización.
+Antes de implementar el servicio propuesto, la falta de recursos académicos
+provocaba un déficit considerable respecto al rendimiento en el proceso de
+formación profesional.
+En base a los resultados obtenidos aplicando técnicas de entrevistas y encuestas
+se desarrolla un sistema web para que los recursos académicos puedan ser
+facilitados y se encuentre a disposición de la comunidad académica solicitante como
+ayuda a los enfoques de formación e investigación de la academia.
+            </p>
+          </div>
+          <div id = "second" class="block block-border-bottom-grey block-pd-sm">
+            <h3 class="block-title">
+              Objetivos de proyecto
+            </h3>
+            <p align = "justify">
+            − Mejorar los niveles académicos de los estudiantes de la FACCI. <br>
+− Aumentar los promedios de aprobación de materias. <br>
+− Brindar información y material de calidad a la comunidad. <br>
+− Analizar la información necesaria a compartir con el estudiantado. <br>
+− Colaborar en el proceso de enseñanza-aprendizaje de la facultad. <br><br>
+Específicos: <br> <br>
+1. Realizar el levantamiento de información para establecer los puntos
+académicos a fortalecer con el desarrollo del proyecto. <br>
+2. Definir los indicadores de productividad y la metodología de estudio y
+desarrollo a aplicar en el proyecto. <br>
+3. Diseñar e implementar el repositorio, distribuyendo el sistema a la comunidad
+académica brindando la socialización del proyecto.
+
+            </p>
           </div>
           <div class="block-highlight block-pd-h block-pd-sm">
             <h3 class="block-title">
-                Our Mission
+                Misión
               </h3>
-            <p class="text-fancy">Vel in amet mauris? Turpis pulvinar a proin tincidunt pid, vel odio lundium sit, cras. Duis mattis porttitor nunc elementum eros, in turpis nec. Lectus dictumst risus ut ac porta, urna ac vel, a ut dis!</p>
+            <p class="text-fancy" align = "justify">
+            Este proyecto se realiza con el propósito de aportar al conocimiento y proceso
+            de aprendizaje del estudiantado de la ULEAM, en un principio de la FACCI y
+            a la comunidad en general que desee desarrollar y aumentar la información
+            de la cual dispone mejorando su desempeño y nivel académico.
+            </p>
           </div>
           <div class="block">
             <h3 class="block-title">
-                Vital Stats
+                Estadísticas
               </h3>
             <div class="row">
               <div class="col-md-4">
                 <div class="stat">
                   <span data-counter-up>1000</span>s
-                  <small>Happpy Customers</small>
+                  <small>Visitantes satisfechos</small>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="stat">
                   <span data-counter-up>163</span>+
-                  <small>GB Transfered</small>
+                  <small>Visualizaciones</small>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="stat">
                   <span data-counter-up>214</span>
-                  <small>Bugs Fixed</small>
+                  <small>Correos enviados</small>
                 </div>
               </div>
             </div>
@@ -297,21 +340,15 @@ include 'DB.php';
         <div class="col-md-3 col-md-pull-9 sidebar visible-md-block visible-lg-block">
           <ul class="nav nav-pills nav-stacked">
             <li class="active">
-              <a href="about.html" class="first">
-                  About Us
-                  <small>How It All Began</small>
+              <a href="about.php" class="first">
+                  Resumen ejecutivo
+                  <small>Planteamiento del proyecto</small>
                 </a>
             </li>
-            <li>
-              <a href="#">
-                  The Team
-                  <small>Our team of stars</small>
-                </a>
-            </li>
-            <li>
-              <a href="#">
-                  Contact Us
-                  <small>How to get in touch</small>
+            <li class="#">
+              <a href="#second" class="second">
+                  Objetivos
+                  <small>Formulación</small>
                 </a>
             </li>
           </ul>
@@ -320,52 +357,38 @@ include 'DB.php';
     </div>
   </div>
   <!-- Call out block -->
-  <div class="block block-bg-primary block-bg-overlay block-bg-overlay-5 text-center" data-block-bg-img="https://picjumbo.imgix.net/HNCK8991.jpg?q=40&amp;w=1650&amp;sharp=30" data-stellar-background-ratio="0.3">
-    <h2 class="m-t-0">
-        Be part of our amazing team!
-      </h2>
-    <p class="m-a-0">
-      <a href="#" class="btn btn-more btn-lg i-right">We're Hiring <i class="fa fa-angle-right"></i></a>
-    </p>
-  </div>
-  <!-- Call out block -->
   <div class="block block-pd-sm block-bg-primary">
     <div class="container">
       <div class="row">
         <h3 class="col-md-4">
-            Some of our Clients
+            Comunidades estudiantiles
           </h3>
         <div class="col-md-8">
           <div class="row">
             <!--Client logos should be within a 120px wide by 60px height image canvas-->
             <div class="col-xs-6 col-md-2">
-              <a href="https://bootstrapmade.com" title="Client 1">
-                  <img src="img/clients/client1.png" alt="Client 1 logo" class="img-responsive">
+              <a href="#" title="Software Libre">
+                  <img src="img/clients/softwarelibre.png" alt="Ssoftware Libre" class="img-responsive">
                 </a>
             </div>
             <div class="col-xs-6 col-md-2">
-              <a href="https://bootstrapmade.com" title="Client 2">
-                  <img src="img/clients/client2.png" alt="Client 2 logo" class="img-responsive">
+              <a href="#" title="Client 2">
+                  <img src="img/clients/microsoft.png" alt="Client 2 logo" class="img-responsive">
                 </a>
             </div>
             <div class="col-xs-6 col-md-2">
-              <a href="https://bootstrapmade.com" title="Client 3">
-                  <img src="img/clients/client3.png" alt="Client 3 logo" class="img-responsive">
+              <a href="#" title="Client 3">
+                  <img src="img/clients/mobilemonkeys.png" alt="Client 3 logo" class="img-responsive">
                 </a>
             </div>
             <div class="col-xs-6 col-md-2">
-              <a href="https://bootstrapmade.com" title="Client 4">
-                  <img src="img/clients/client4.png" alt="Client 4 logo" class="img-responsive">
+              <a href="#" title="Client 4">
+                  <img src="img/clients/vesgeek.png" alt="Client 4 logo" class="img-responsive">
                 </a>
             </div>
             <div class="col-xs-6 col-md-2">
-              <a href="https://bootstrapmade.com" title="Client 5">
-                  <img src="img/clients/client5.png" alt="Client 5 logo" class="img-responsive">
-                </a>
-            </div>
-            <div class="col-xs-6 col-md-2">
-              <a href="https://bootstrapmade.com" title="Client 6">
-                  <img src="img/clients/client6.png" alt="Client 6 logo" class="img-responsive">
+              <a href="#" title="Client 5">
+                  <img src="img/clients/ieee.png" alt="Client 5 logo" class="img-responsive">
                 </a>
             </div>
           </div>
@@ -377,85 +400,86 @@ include 'DB.php';
   <!-- ======== @Region: #footer ======== -->
   <footer id="footer" class="block block-bg-grey-dark" data-block-bg-img="img/bg_footer-map.png" data-stellar-background-ratio="0.4">
     <div class="container">
-      <a href="#top" class="scrolltop">Top</a>
+
       <div class="row" id="contact">
 
         <div class="col-md-3">
           <address>
-              <strong>Flexor Bootstrap Theme Inc</strong>
+              <strong>Información de contacto</strong>
               <br>
-              <i class="fa fa-map-pin fa-fw text-primary"></i> Sunshine House, Sunville. SUN12
+              <i class="fa fa-map-pin fa-fw text-primary"></i> Manta, ciudadela universitaria
               <br>
-              <i class="fa fa-phone fa-fw text-primary"></i> 019223 8092344
+              <i class="fa fa-phone fa-fw text-primary"></i>  (05) 262-3046 
               <br>
-              <i class="fa fa-envelope-o fa-fw text-primary"></i> info@flexorinc.com
+              <i class="fa fa-envelope-o fa-fw text-primary"></i> info@facci.com
               <br>
             </address>
         </div>
 
-        <div class="col-md-6">
+        <div id = "contacto" class="col-md-6">
           <h4 class="text-uppercase">
-              Contact Us
+              Contacto
             </h4>
           <div class="form">
-            <div id="sendmessage">Your message has been sent. Thank you!</div>
+            <div id="sendmessage">
+              Tu mensaje ha sido enviado. ¡Gracias!
+            </div>
             <div id="errormessage"></div>
-            <form action="" method="post" role="form" class="contactForm">
+            <form action="contactform.php" method="post" role="form" class="contactForm">
               <div class="form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email, dirección de correo" data-rule="email" data-msg="Please enter a valid email" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensaje"></textarea>
                 <div class="validation"></div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit">Enviar mensaje</button></div>
             </form>
           </div>
         </div>
 
-        <div class="col-md-3">
+         <div class="col-md-3">
           <h4 class="text-uppercase">
-              Follow Us On:
+              Síguenos:
             </h4>
           <!--social media icons-->
           <div class="social-media social-media-stacked">
             <!--@todo: replace with company social media details-->
             <a href="#"><i class="fa fa-twitter fa-fw"></i> Twitter</a>
-            <a href="#"><i class="fa fa-facebook fa-fw"></i> Facebook</a>
+            <a href="https://www.facebook.com/Facci.Uleam/" target = "_blank"><i class="fa fa-facebook fa-fw"></i> Facebook</a>
             <a href="#"><i class="fa fa-linkedin fa-fw"></i> LinkedIn</a>
             <a href="#"><i class="fa fa-google-plus fa-fw"></i> Google+</a>
           </div>
         </div>
-
       </div>
       <div class="row subfooter">
         <!--@todo: replace with company copyright details-->
         <div class="col-md-7">
-          <p>Copyright © Flexor Theme</p>
+          <p>Copyright © anlecap</p>
           <div class="credits">
             <!--
               All the links in the footer should remain intact.
               You can delete the links only if you purchased the pro version.
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Flexor
+              Licensing information: #/license/
+              Purchase the pro version with working PHP/AJAX contact form: #/buy/?theme=Flexor
             -->
-            <a href="https://bootstrapmade.com/">Free Bootstrap Templates</a> by BootstrapMade.com
+            <a href="https://www.facebook.com/anlecap/" target = "_blank">Desarrollado por:</a> anlecap soluciones informáticas
           </div>
         </div>
         <div class="col-md-5">
           <ul class="list-inline pull-right">
-            <li><a href="#">Terms</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Términos</a></li>
+            <li><a href="#">Privacidad</a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=593996190948" target = "_blank">Contacto</a></li>
           </ul>
         </div>
       </div>

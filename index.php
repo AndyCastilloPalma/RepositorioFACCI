@@ -750,7 +750,7 @@ Usage: data-block-bg-img="IMAGE-URL" to apply a background image clearly via jQu
 
         <div class="col-md-3">
           <h4 class="text-uppercase">
-              Síguemos:
+              Síguenos:
             </h4>
           <!--social media icons-->
           <div class="social-media social-media-stacked">
