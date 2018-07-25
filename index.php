@@ -196,7 +196,7 @@ include 'DB.php';
                   <li class="dropdown-footer">REPOSITORIO FACCI</li>
                 </ul>
               </li>
-              <li><a href="pdf\CASTILLO_ANDY_BOHÓRQUEZ_CARLOS_CANTOS_ERICK_BENÍTEZ_JUNIOR_8A_PRESENTACIÓN_PROYECTO_G2_V.3_2018.pdf"
+              <li><a href="pdf\presentacion.pdf"
               target = "_blank">Documentación</a></li>
               <li class="dropdown dropdown-mm">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Talleres<b class="caret"></b></a>
@@ -255,7 +255,7 @@ include 'DB.php';
                       el proceso de formación académica de profesionales de Ingeniería en Sistemas brindando <br>
                       un sitio que aloja talleres, guías y modelos prácticos de desarrollo de actividades.
                   </p>
-                  <a href="#" class="btn btn-more btn-lg i-right">Leer más <i class="fa fa-plus"></i></a>
+                  <a href="pdf\paper.pdf" target = "_blank" class="btn btn-more btn-lg i-right">Leer más <i class="fa fa-plus"></i></a>
                 </div>
                 <div class="col-md-6 col-md-pull-6 hidden-xs">
                   <img src="img/slides/slide1.png" alt="Slide 1" class="center-block img-responsive">
@@ -280,7 +280,7 @@ include 'DB.php';
                     con criterio creativo e innovador de reconocimiento local y nacional; en la <br>
                     formación integral de profesionales generadores de bienes y servicios.
                   </p>
-                  <a href="#" class="btn btn-more btn-lg"><i class="fa fa-plus"></i>Leer más</a>
+                  <a href="pdf\paper.pdf" target = "_blank" class="btn btn-more btn-lg"><i class="fa fa-plus"></i>Leer más</a>
                 </div>
                 <div class="col-md-6 hidden-xs">
                   <img src="img/slides/slide2.png" alt="Slide 2" class="center-block img-responsive">
