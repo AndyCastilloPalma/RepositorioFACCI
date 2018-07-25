@@ -1,9 +1,13 @@
+<?php 
+session_start();
+include 'DB.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title>About - Flexor Bootstrap Theme</title>
+  <title>Repositorio FACCI</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -48,18 +52,15 @@
 
   <!-- =======================================================
     Theme Name: Flexor
-    Theme URL: https://bootstrapmade.com/flexor-free-multipurpose-bootstrap-template/
+    Theme URL: #/flexor-free-multipurpose-bootstrap-template/
     Author: BootstrapMade.com
-    Author URL: https://bootstrapmade.com
+    Author URL: #
   ======================================================= -->
-
 </head>
 
-<!-- ======== @Region: body ======== -->
-
-<body class="page-about">
+<body class="page-index has-hero">
   <!--Change the background class to alter background image, options are: benches, boots, buildings, city, metro -->
-  <div id="background-wrapper" class="buildings" data-stellar-background-ratio="0.8">
+  <div id="background-wrapper" class="buildings" data-stellar-background-ratio="0.1">
 
     <!-- ======== @Region: #navigation ======== -->
     <div id="navigation" class="wrapper">
@@ -69,50 +70,56 @@
           <div class="row">
             <div class="col-md-3">
               <h3>
-                  About Us
+                  Sobre nosotros
                 </h3>
-              <p>Flexor is a super flexible responsive theme with a modest design touch.</p>
-              <a href="about.html" class="btn btn-more"><i class="fa fa-plus"></i> Learn more</a>
+              <p>Sitio web que aloja material académico y promueve el buen uso de la información en mejora de 
+                los niveles de estudio de la Facultad de Ciencias Informáticas.</p>
+              <a href="about.php" class="btn btn-more"><i class="fa fa-plus"></i> Leer más</a>
             </div>
             <div class="col-md-3">
               <!--@todo: replace with company contact details-->
               <h3>
-                  Contact Us
+                  Contacto
                 </h3>
               <address>
-                  <strong>Flexor Bootstrap Theme Inc</strong>
+                  <strong>FACCI - ULEAM</strong>
                   <abbr title="Address"><i class="fa fa-pushpin"></i></abbr>
-                  Sunshine House, Sunville. SUN12 8LU.
+                  Ciudadela Universitaria – s/n . ULEAM al lado del Vicerectorado Administrativo.
+                  Puerto De Manta, Manabi, Ecuador
                   <br>
                   <abbr title="Phone"><i class="fa fa-phone"></i></abbr>
-                  019223 8092344
+                  (05) 262-3046
                   <br>
                   <abbr title="Email"><i class="fa fa-envelope-alt"></i></abbr>
-                  info@flexorinc.com
+                  info@facci.ec
                 </address>
             </div>
             <div class="col-md-6">
               <!--Colour & Background Switch for demo - @todo: remove in production-->
               <h3>
-                  Theme Variations
+                  Personalización
                 </h3>
               <div class="switcher">
                 <div class="cols">
-                  Backgrounds:
+                  Fondos:
                   <br>
-                  <a href="#benches" class="background benches active" title="Benches">Benches</a> <a href="#boots" class="background boots " title="Boots">Boots</a> <a href="#buildings" class="background buildings " title="Buildings">Buildings</a>
-                  <a
-                    href="#city" class="background city " title="City">City</a> <a href="#metro" class="background metro " title="Metro">Metro</a>
+                  <a href="#benches" class="background benches active" title="Benches">Benches</a> 
+                  <a href="#boots" class="background boots " title="Boots">Boots</a> 
+                  <a href="#buildings" class="background buildings " title="Buildings">Buildings</a>
+                  <a href="#city" class="background city " title="City">City</a> 
+                  <a href="#metro" class="background metro " title="Metro">Metro</a>
                 </div>
                 <div class="cols">
-                  Colours:
+                  Colores:
                   <br>
-                  <a href="#orange" class="colour orange active" title="Orange">Orange</a> <a href="#green" class="colour green " title="Green">Green</a> <a href="#blue" class="colour blue " title="Blue">Blue</a> <a href="#lavender" class="colour lavender "
-                    title="Lavender">Lavender</a>
+                  <a href="#green" id="color-verde" class="colour green " title="Green">Green</a> 
+                  <a href="#orange" class="colour orange active" title="Orange">Orange</a> 
+                  <a href="#blue" class="colour blue " title="Blue">Blue</a> 
+                  <a href="#lavender" class="colour lavender " title="Lavender">Lavender</a>
                 </div>
               </div>
               <p>
-                <small>Selection is not persistent.</small>
+                <small>La selección no es persistente.</small>
               </p>
             </div>
           </div>
@@ -124,24 +131,30 @@
           <div class="row">
             <div class="col-md-8">
               <!--navbar-branding/logo - hidden image tag & site name so things like Facebook to pick up, actual logo set via CSS for flexibility -->
-              <a class="navbar-brand" href="index.html" title="Home">
+              <a class="navbar-brand" href="index.php" title="Home">
                 <h1 class="hidden">
                     <img src="img/logo.png" alt="Flexor Logo">
-                    Flexor
+                    FACCI
                   </h1>
               </a>
               <div class="navbar-slogan">
-                Responsive HTML Theme
-                <br> By BootstrapMade.com
+                Repositorio Facultad
+                <br>de Ciencias Informáticas
               </div>
             </div>
             <!--header rightside-->
             <div class="col-md-4">
               <!--user menu-->
               <ul class="list-inline user-menu pull-right">
-                <li class="hidden-xs"><i class="fa fa-edit text-primary"></i> <a href="register.html" class="text-uppercase">Register</a></li>
-                <li class="hidden-xs"><i class="fa fa-sign-in text-primary"></i> <a href="login.html" class="text-uppercase">Login</a></li>
-                <li><a class="btn btn-primary btn-hh-trigger" role="button" data-toggle="collapse" data-target=".header-hidden">Open</a></li>
+                <li class="user-button"><a class="btn btn-primary btn-hh-trigger" role="button" data-toggle="collapse" data-target=".header-hidden">Open</a></li>
+              </ul>
+              <ul class="list-inline user-menu pull-right">
+                <?php if ($_SESSION and $_SESSION['user']): ?>
+                  <li class="user-login"><i class="fa fa-sign-out text-primary"></i> <a href="logout.php" class="text-uppercase">Cerrar Sesión</a></li>
+                <?php else: ?>
+                  <li class="user-register"><i class="fa fa-edit text-primary "></i> <a href="register.php" class="text-uppercase">Registro</a></li>
+                  <li class="user-login"><i class="fa fa-sign-in text-primary"></i> <a href="login.php" class="text-uppercase">Iniciar Sesión</a></li>
+                <?php endif ?>
               </ul>
             </div>
           </div>
@@ -155,7 +168,7 @@
           <div class="navbar-text social-media social-media-inline pull-right">
             <!--@todo: replace with company social media details-->
             <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.facebook.com/Facci.Uleam/" target=""_blank><i class="fa fa-facebook"></i></a>
             <a href="#"><i class="fa fa-linkedin"></i></a>
             <a href="#"><i class="fa fa-google-plus"></i></a>
           </div>
@@ -163,45 +176,53 @@
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav" id="main-menu">
               <li class="icon-link">
-                <a href="index.html"><i class="fa fa-home"></i></a>
+                <a href="index.php"><i class="fa fa-home"></i></a>
               </li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages<b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Niveles<b class="caret"></b></a>
                 <!-- Dropdown Menu -->
                 <ul class="dropdown-menu">
-                  <li class="dropdown-header">Flexor Lite Version Pages</li>
-                  <li><a href="elements.html" tabindex="-1" class="menu-item">Elements</a></li>
-                  <li><a href="about.html" tabindex="-1" class="menu-item">About / Inner Page</a></li>
-                  <li><a href="login.html" tabindex="-1" class="menu-item">Login</a></li>
-                  <li><a href="register.html" tabindex="-1" class="menu-item">Sign-Up</a></li>
-                  <li class="dropdown-footer">Dropdown footer</li>
+                  <li class="dropdown-header">Niveles de estudio</li>
+                  <li><a href="elements.php" tabindex="-1" class="menu-item">Primero</a></li>
+                  <li><a href="about.php" tabindex="-1" class="menu-item">Segundo</a></li>
+                  <li><a href="login.php" tabindex="-1" class="menu-item">Tercero</a></li>
+                  <li><a href="register.php" tabindex="-1" class="menu-item">Cuarto</a></li>
+                  <li><a href="elements.php" tabindex="-1" class="menu-item">Quinto</a></li>
+                  <li><a href="about.php" tabindex="-1" class="menu-item">Sexto</a></li>
+                  <li><a href="login.php" tabindex="-1" class="menu-item">Séptimo</a></li>
+                  <li><a href="register.php" tabindex="-1" class="menu-item">Octavo</a></li>
+                  <li><a href="login.php" tabindex="-1" class="menu-item">Noveno</a></li>
+                  <li><a href="register.php" tabindex="-1" class="menu-item">Décimo</a></li>
+                  <li class="dropdown-footer">REPOSITORIO FACCI</li>
                 </ul>
               </li>
-              <li><a href="#">Menu Link</a></li>
+              <li><a href="pdf\presentacion.pdf"
+              target = "_blank">Documentación</a></li>
               <li class="dropdown dropdown-mm">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mega Menu<b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Talleres<b class="caret"></b></a>
                 <!-- Dropdown Menu -->
                 <ul class="dropdown-menu dropdown-menu-mm dropdown-menu-persist">
                   <li class="row">
                     <ul class="col-md-6">
-                      <li class="dropdown-header">Websites and Apps</li>
-                      <li><a href="#">Analysis and Planning</a></li>
-                      <li><a href="#">User Experience / Information Architecture</a></li>
-                      <li><a href="#">User Interface Design / UI Design</a></li>
-                      <li><a href="#">Code &amp; Development / Implementation &amp; Support</a></li>
+                      <li class="dropdown-header">Bases de Datos y desarrollo</li>
+                      <li><a href="https://www.youtube.com/watch?v=2S-TPBBFfL8" target="_blank">Replicación Heterogénea</a></li>
+                      <li><a href="https://www.youtube.com/watch?v=ImfVScxciGU" target="_blank">Snapshot DB Northwind SQL Server 2016</a></li>
+                      <li><a href="https://www.youtube.com/watch?v=s5xzm45bWvA" target="_blank">Linked Server SQL - Oracle 11g</a></li>
+                      <li><a href="https://www.youtube.com/watch?v=PFc9-kcu6lc" target="_blank">C# - Ejercicios básicos en consola</a></li>
                     </ul>
                     <ul class="col-md-6">
-                      <li class="dropdown-header">Enterprise solutions</li>
-                      <li><a href="#">Business Analysis</a></li>
-                      <li><a href="#">Custom UX Consulting</a></li>
-                      <li><a href="#">Quality Assurance</a></li>
+                      <li class="dropdown-header">Configuraciones y arquitectura</li>
+                      <li><a href="https://www.youtube.com/watch?v=xCq4wPVXGK0" target="_blank">Instalación Adempiere ERP y CRM versión 390LTS</a></li>
+                      <li><a href="https://www.youtube.com/watch?v=AsDI0WNc3BA" target="_blank">Guía de implementación openbravo ERP con VirtualBox</a></li>
+                      <li><a href="https://www.youtube.com/watch?v=qFAdC5Esh0s" target="_blank">eXtreme Programming</a></li>
+                      <li><a href="https://www.youtube.com/watch?v=I9GZdBEL1CU" target="_blank">Lógica fuzzy, difusa o booleana</a></li>
                     </ul>
                   </li>
                   <li class="dropdown-footer">
                     <div class="row">
-                      <div class="col-md-7">Like the lite version? <strong>Get the extended version of Flexor.</strong></div>
+                      <div class="col-md-7">La información ha sido de ayuda? <strong>envíe sugerencias en nuestro formulario.</strong></div>
                       <div class="col-md-5">
-                        <a href="https://bootstrapmade.com" class="btn btn-more btn-lg pull-right"><i class="fa fa-cloud-download"></i> Get It Now</a>
+                        <a href="#" class="btn btn-more btn-lg pull-right"><i class="fa fa-cloud-download"></i>Descargas</a>
                       </div>
                     </div>
                   </li>
@@ -213,7 +234,6 @@
         </div>
       </div>
     </div>
-  </div>
 
   <!-- ======== @Region: #content ======== -->
   <div id="content">
