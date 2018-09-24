@@ -183,16 +183,16 @@ include 'DB.php';
                 <!-- Dropdown Menu -->
                 <ul class="dropdown-menu">
                   <li class="dropdown-header">Niveles de estudio</li>
-                  <li><a href="elements.php" tabindex="-1" class="menu-item">Primero</a></li>
-                  <li><a href="about.php" tabindex="-1" class="menu-item">Segundo</a></li>
-                  <li><a href="login.php" tabindex="-1" class="menu-item">Tercero</a></li>
-                  <li><a href="register.php" tabindex="-1" class="menu-item">Cuarto</a></li>
-                  <li><a href="elements.php" tabindex="-1" class="menu-item">Quinto</a></li>
-                  <li><a href="about.php" tabindex="-1" class="menu-item">Sexto</a></li>
-                  <li><a href="login.php" tabindex="-1" class="menu-item">Séptimo</a></li>
-                  <li><a href="register.php" tabindex="-1" class="menu-item">Octavo</a></li>
-                  <li><a href="login.php" tabindex="-1" class="menu-item">Noveno</a></li>
-                  <li><a href="register.php" tabindex="-1" class="menu-item">Décimo</a></li>
+                  <li><a href="pdf/niveles.pdf" target = "_blank" tabindex="-1" class="menu-item">Primero</a></li>
+                  <li><a href="pdf/niveles.pdf" target = "_blank" tabindex="-1" class="menu-item">Segundo</a></li>
+                  <li><a href="pdf/niveles.pdf" target = "_blank" tabindex="-1" class="menu-item">Tercero</a></li>
+                  <li><a href="pdf/niveles.pdf" target = "_blank" tabindex="-1" class="menu-item">Cuarto</a></li>
+                  <li><a href="pdf/niveles.pdf" target = "_blank" tabindex="-1" class="menu-item">Quinto</a></li>
+                  <li><a href="pdf/niveles.pdf" target = "_blank" tabindex="-1" class="menu-item">Sexto</a></li>
+                  <li><a href="pdf/niveles.pdf" target = "_blank" tabindex="-1" class="menu-item">Séptimo</a></li>
+                  <li><a href="pdf/niveles.pdf" target = "_blank" tabindex="-1" class="menu-item">Octavo</a></li>
+                  <li><a href="pdf/niveles.pdf" target = "_blank" tabindex="-1" class="menu-item">Noveno</a></li>
+                  <li><a href="pdf/niveles.pdf" target = "_blank" tabindex="-1" class="menu-item">Décimo</a></li>
                   <li class="dropdown-footer">REPOSITORIO FACCI</li>
                 </ul>
               </li>
